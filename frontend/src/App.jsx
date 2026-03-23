@@ -1,10 +1,19 @@
+import { Routes, Route } from "react-router-dom"
+import Home from "./pages/Home"
+import Dashboard from "./pages/Dashboard"
+import CreateComplaint from "./pages/CreateComplaint"
+import Login from "./components/Login"
+import Signup from "./components/Signup"
+
 function App() {
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-500">
-        JanConnect 🚀
-      </h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/create-complaint" element={<CreateComplaint />} />
+      <Route path="/Login" element={<Login />} />
+      <Route path="/Signup" element={<Signup />} />
+    </Routes>
   )
 }
 
